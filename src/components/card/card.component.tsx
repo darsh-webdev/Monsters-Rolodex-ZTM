@@ -1,8 +1,13 @@
 import React from "react";
+import { Monster } from "../../App";
 import "./card.styles.css";
 
-function Card(props) {
-  const { id, name, email } = props.monster;
+type CardProps = {
+  monster: Monster;
+};
+
+function Card({ monster }: CardProps) {
+  const { id, name, email } = monster;
   return (
     <div key={id} className="card-container">
       <img alt={name} src={`https://robohash.org/${id}?set=set2`} />

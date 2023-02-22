@@ -1,10 +1,13 @@
 import React from "react";
 import Card from "../card/card.component";
+import { Monster } from "../../App";
 import "./card-list.styles.css";
 
-const CardList = (props) => {
-  const { monstersList } = props;
+type CardListProps = {
+  monstersList: Monster[];
+};
 
+const CardList = ({ monstersList }: CardListProps) => {
   return (
     <div className="card-list">
       {monstersList.map((monster) => {
